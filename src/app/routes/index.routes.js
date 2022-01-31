@@ -1,11 +1,12 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { Home } from '../page/home/home'
 
 export function IndexRoutes() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={} />
-        <Route index element={} />
+        <Route path="/" element={Home} />
+        <Route index element={Home} />
         <Route
           path="*"
           element={
