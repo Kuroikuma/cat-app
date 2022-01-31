@@ -5,8 +5,8 @@ export function IndexRoutes() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={Home} />
-        <Route index element={Home} />
+        <Route path="/" element={<Home />} />
+        <Route index element={<Home />} />
         <Route
           path="*"
           element={
