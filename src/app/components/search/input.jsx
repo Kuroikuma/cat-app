@@ -2,6 +2,7 @@ import style from './search.module.css'
 import search from './../../../assets/search.png'
 import { citysSupport } from '../../../services/faker'
 import { useState } from 'react'
+import { Breedslist } from './breeds-list'
 
 export const Input = () => {
   const [show, setShow] = useState(false)
@@ -26,25 +27,7 @@ export const Input = () => {
         placeholder="Enter your breed"
       />
       <img src={search} alt="search" />
-      <div
-        className={
-          show
-            ? `${style.breedListWraper} ${style.show}`
-            : `${style.breedListWraper}`
-        }
-      >
-        <div className={style.breedList}>
-          {breeds.length ? (
-            breeds.map((item, index) => (
-              <div className={style.breedListItem} key={index}>
-                <p>{item.name}</p>
-              </div>
-            ))
-          ) : (
-            <p>no results found for the entered breed</p>
-          )}
-        </div>
-      </div>
+      <Breedslist breeds={breeds} show={show} />
     </div>
   )
 }
