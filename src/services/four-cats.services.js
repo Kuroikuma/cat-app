@@ -2,7 +2,7 @@ export const fourCats = [
   {
     name: 'Siamese',
     breed_id: 'siam',
-    url: 'https://cdn2.thecatapi.com/images/DFHMMPNcD.jpg',
+    url: 'https://cdn2.thecatapi.com/images/Kf-zJDHCx.jpg',
   },
   {
     name: 'Russian Blue',
