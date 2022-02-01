@@ -14,7 +14,7 @@ export const Input = () => {
     }
     setBreeds(
       citysSupport.filter((element) =>
-        element.name.includes(event.target.value)
+        element.name.toLowerCase().includes(event.target.value.toLowerCase())
       )
     )
   }
