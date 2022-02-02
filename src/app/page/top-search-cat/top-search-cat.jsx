@@ -1,16 +1,21 @@
 import { LogoIcons } from '../../components/icons/logo'
 import style from './top-search-cat.module.css'
-import { FakerTop } from '../../../services/faker-top'
+import { getBreedTop } from '../../../services/cat.services'
+import { useEffect, useState } from 'react'
 
 export const TopSearchCat = () => {
+  const [breed, setBreed] = useState([])
+  useEffect(() => {
+    getBreedTop().then((response) => setBreed(response))
+  }, [])
   return (
     <div className={style.wrapper}>
       <div className={style.container}>
         <LogoIcons fill={'#291507'} width={128} height={43} />
         <h1>Top 10 most searched breeds</h1>
         <div className={style.top_list}>
-          {FakerTop.length
-            ? FakerTop.map((item, index) => (
+          {breed.length
+            ? breed.map((item, index) => (
                 <div className={style.top_list__item}>
                   <div className={style.top_list__item__img}>
                     <img src={item.image.url} alt={item.name} />

@@ -14,10 +14,7 @@ export const ContentDescription = (props) => {
   return (
     <div className={style.content}>
       <div className={style.img}>
-        <img
-          src="https://cdn2.thecatapi.com/images/unPP08xOZ.jpg"
-          alt="profile_Photo"
-        />
+        <img src={file} alt="profile_Photo" />
       </div>
       <div className={style.description}>
         <h2>{name}</h2>

@@ -13,7 +13,7 @@ export const Breedslist = ({ show, breeds }) => {
       <div className={style.breedList}>
         {breeds.length ? (
           breeds.map((item, index) => (
-            <BreedslistItem key={index} name={item.name} />
+            <BreedslistItem key={index} name={item.name} id={item.id} />
           ))
         ) : (
           <p>no results found for the entered breed</p>

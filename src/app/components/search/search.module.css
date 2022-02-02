@@ -105,6 +105,7 @@
   align-items: center;
   padding-left: 10px;
   border-radius: 12px;
+  cursor: pointer;
 }
 .breedListItem:hover {
   background: #e3e1dc;

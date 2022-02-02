@@ -9,7 +9,7 @@ export function IndexRoutes() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
-        <Route path="/description" element={<CatDescription />} />
+        <Route path="description/:breed_id" element={<CatDescription />} />
         <Route path="/top" element={<TopSearchCat />} />
         <Route index element={<Home />} />
         <Route
