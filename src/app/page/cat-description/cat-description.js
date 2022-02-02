@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom'
 import { CatDescriptionView } from './cat-description.view'
 import { useMasonry } from '../../hook/useMasonry'
 import { getBreedByID } from '../../../services/cat.services'
+import { Loading } from '../../components/loading/loading'
 
 export const CatDescription = () => {
   let params = useParams()
@@ -16,14 +17,12 @@ export const CatDescription = () => {
   const [origin, setOrigin] = useState('')
   const [life_span, setLife_span] = useState('')
   const [isCompleted, setIsCompleted] = useState(false)
-  const [isFinished, setIsFinished] = useState(false)
   const [columns, setData] = useMasonry()
   useEffect(() => {
     getBreedByID(params.breed_id).then((response) => {
       setBreeds(response)
       console.log(response)
     })
-    setIsFinished(true)
   }, [])
   useEffect(() => {
     if (breeds.length) {
@@ -74,7 +73,7 @@ export const CatDescription = () => {
     setData(files)
   }, [isCompleted])
 
-  return (
+  return columns.length ? (
     <CatDescriptionView
       description={description}
       name={name}
@@ -85,5 +84,7 @@ export const CatDescription = () => {
       origin={origin}
       life_span={life_span}
     />
+  ) : (
+    <Loading />
   )
 }

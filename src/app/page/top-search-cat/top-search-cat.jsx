@@ -2,13 +2,14 @@ import { LogoIcons } from '../../components/icons/logo'
 import style from './top-search-cat.module.css'
 import { getBreedTop } from '../../../services/cat.services'
 import { useEffect, useState } from 'react'
+import { Loading } from '../../components/loading/loading'
 
 export const TopSearchCat = () => {
   const [breed, setBreed] = useState([])
   useEffect(() => {
     getBreedTop().then((response) => setBreed(response))
   }, [])
-  return (
+  return breed.length ? (
     <div className={style.wrapper}>
       <div className={style.container}>
         <LogoIcons fill={'#291507'} width={128} height={43} />
@@ -32,5 +33,7 @@ export const TopSearchCat = () => {
         </div>
       </div>
     </div>
+  ) : (
+    <Loading />
   )
 }
