@@ -1,11 +1,14 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { Home } from '../page/home/home'
+import { CatDescription } from '../page/cat-description/cat-description'
 
 export function IndexRoutes() {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/description" element={<CatDescription />} />
         <Route index element={<Home />} />
         <Route
           path="*"
