@@ -1,6 +1,7 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { Home } from '../page/home/home'
 import { CatDescription } from '../page/cat-description/cat-description'
+import { TopSearchCat } from '../page/top-search-cat/top-search-cat'
 
 export function IndexRoutes() {
   return (
@@ -9,6 +10,7 @@ export function IndexRoutes() {
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
         <Route path="/description" element={<CatDescription />} />
+        <Route path="/top" element={<TopSearchCat />} />
         <Route index element={<Home />} />
         <Route
           path="*"
