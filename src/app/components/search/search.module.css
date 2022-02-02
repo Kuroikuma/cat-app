@@ -129,3 +129,117 @@
   background: #f2f2f2;
   border-radius: 30px;
 }
+@media screen and (max-width: 425px) {
+  .container {
+    height: 60%;
+    left: 10%;
+    width: 31%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: absolute;
+  }
+  .info p {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 14px;
+    color: #ffffff;
+  }
+  .container > p {
+    font-family: Mystery Quest;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 19px;
+
+    color: #ffffff;
+  }
+  .info {
+    height: 40%;
+  }
+  .Input {
+    height: 22%;
+  }
+  .Input input {
+    font-size: 14px;
+    padding-left: 10px;
+  }
+  .Input img {
+    right: 10px;
+  }
+  .breedListWraper {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 20px;
+    top: 0px;
+    border-radius: 0px;
+    right: 0px;
+    padding-left: 20px;
+    transform: translateY(0px);
+    transform: translateX(100vw);
+  }
+  .breedList {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    gap: 10px;
+    overflow: auto;
+    white-space: nowrap;
+    grid-template-columns: 100%;
+    grid-auto-rows: 10%;
+  }
+  .icon {
+    height: 40px;
+    width: 40px;
+    background: rgba(151, 151, 151, 0.1);
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  .line {
+    height: 2px;
+    width: 60%;
+    position: absolute;
+    border-radius: 3px;
+    transform: rotate(45deg);
+    background: #000000;
+  }
+  .line2 {
+    height: 2px;
+    width: 60%;
+    position: absolute;
+    border-radius: 3px;
+    transform: rotate(-45deg);
+    background: #000000;
+  }
+  .inputModal {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10%;
+    width: 100%;
+  }
+  .inputModal input {
+    height: 100%;
+    width: 950%;
+    border: 1px solid #000000;
+  }
+  .inputModal input {
+    font-size: 18px;
+    padding-left: 20px;
+  }
+  .inputModal img {
+    height: 60%;
+    right: 20px;
+    object-fit: contain;
+  }
+}

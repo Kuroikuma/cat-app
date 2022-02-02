@@ -81,3 +81,25 @@
 .content__right__item img:nth-of-type(2) {
   max-width: 65%;
 }
+@media screen and (max-width: 425px) {
+  .wrapper {
+    width: 95vw;
+    height: 130vh;
+  }
+  .content {
+    width: 90%;
+    gap: 70px;
+    flex-direction: column;
+  }
+  .content__left {
+    height: 50%;
+    width: 100%;
+  }
+  .content__right {
+    height: 50%;
+    width: 100%;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 55% 45%;
+  }
+}

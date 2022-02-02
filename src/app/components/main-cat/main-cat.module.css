@@ -18,3 +18,9 @@
   border-top-left-radius: 34px;
   border-top-right-radius: 34px;
 }
+@media screen and (max-width: 425px) {
+  .main {
+    height: 28vh;
+    width: 95vw;
+  }
+}

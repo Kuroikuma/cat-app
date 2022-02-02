@@ -5,14 +5,16 @@ import { getListBreed } from '../../../services/cat.services'
 import { useEffect, useState } from 'react'
 import { Breedslist } from './breeds-list'
 
-export const Input = () => {
+export const Input = ({ width }) => {
   const [show, setShow] = useState(false)
   const [breeds, setBreeds] = useState([])
+  const [keyboard, setKeyboard] = useState('')
   const [breedsFilter, setBreedsFilter] = useState([])
   useEffect(() => {
     getListBreed().then((response) => setBreeds(response))
   }, [])
   const handlechange = (event) => {
+    setKeyboard(event.target.value)
     if (event.target.value) {
       setShow(true)
     } else {
@@ -24,15 +26,26 @@ export const Input = () => {
       )
     )
   }
+  const handleClose = () => {
+    setShow(false)
+  }
   return (
     <div className={style.Input}>
       <input
         onChange={handlechange}
         type="text"
-        placeholder="Enter your breed"
+        value={keyboard}
+        placeholder={width > 425 ? 'Enter your breed' : 'search'}
       />
       <img src={search} alt="search" />
-      <Breedslist breeds={breedsFilter} show={show} />
+      <Breedslist
+        breeds={breedsFilter}
+        show={show}
+        width={width}
+        handlechange={handlechange}
+        keyboard={keyboard}
+        handleClose={handleClose}
+      />
     </div>
   )
 }

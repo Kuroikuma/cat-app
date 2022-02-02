@@ -14,3 +14,16 @@
   line-height: 44px;
   color: #291507;
 }
+@media screen and (max-width: 425px) {
+  .container {
+    margin-top: 0px;
+  }
+  .container h2 {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 25px;
+    color: #291507;
+  }
+}
