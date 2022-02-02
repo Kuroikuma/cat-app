@@ -1,22 +1,22 @@
 export const fourCats = [
   {
     name: 'Siamese',
-    breed_id: 'siam',
+    id: 'siam',
     url: 'https://cdn2.thecatapi.com/images/Kf-zJDHCx.jpg',
   },
   {
     name: 'Russian Blue',
-    breed_id: 'rblu',
+    id: 'rblu',
     url: 'https://cdn2.thecatapi.com/images/kmvetZsyr.jpg',
   },
   {
     name: 'Siberian',
-    breed_id: 'sibe',
+    id: 'sibe',
     url: 'https://cdn2.thecatapi.com/images/mcHWg83Yj.jpg',
   },
   {
     name: 'American Bobtail',
-    breed_id: 'abob',
+    id: 'abob',
     url: 'https://cdn2.thecatapi.com/images/gVrhv_yAY.jpg',
   },
 ]
