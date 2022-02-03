@@ -18,3 +18,9 @@
   width: 100%;
   justify-content: flex-start;
 }
+@media screen and (max-width: 425px) {
+  .container {
+    height: 240vh;
+    flex-direction: column;
+  }
+}

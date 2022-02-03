@@ -52,3 +52,17 @@
   border-radius: 8px;
   animation: bar_loading 2s ease-in-out infinite;
 }
+
+@media screen and (max-width: 425px) {
+  .Uploaded {
+    height: 35vh;
+    width: 90vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background: #ffffff;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+  }
+}

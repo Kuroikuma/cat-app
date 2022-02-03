@@ -101,3 +101,47 @@
   cursor: pointer;
   object-fit: cover;
 }
+@media screen and (max-width: 425px) {
+  .wrapper {
+    width: 95vw;
+    box-sizing: border-box;
+    padding-top: 15px;
+    display: flex;
+    background-color: #e3e1dc;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 43px;
+    border-bottom-left-radius: 34px;
+    border-bottom-right-radius: 34px;
+  }
+  .top__left p {
+    font-size: 12px;
+    line-height: 15px;
+  }
+  .top__left h2 {
+    font-size: 18px;
+    line-height: 22px;
+  }
+  .top {
+    height: 15%;
+  }
+  .bottom {
+    width: 85%;
+    height: 70%;
+    display: grid;
+    grid-template-columns: repeat(2, 45%);
+    grid-template-rows: 45%;
+    gap: 20px;
+  }
+  .bottomItem p {
+    font-size: 12px;
+    line-height: 15px;
+  }
+  .discover_bottomItem__Img__v-9S5 img {
+    min-width: 100%;
+  }
+  .top__left p::after {
+    width: 22%;
+  }
+}

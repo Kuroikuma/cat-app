@@ -80,3 +80,41 @@
   background: #544439;
   border-radius: 8px;
 }
+@media screen and (max-width: 425px) {
+  .content {
+    flex-direction: column;
+  }
+  .img {
+    height: 100%;
+    width: 90%;
+  }
+  .description {
+    width: 100%;
+  }
+  .description > p {
+    width: 100%;
+  }
+  .description h2 {
+    font-size: 18px;
+    line-height: 22px;
+  }
+  .description > p {
+    font-size: 12px;
+    line-height: 15px;
+  }
+  .description p span {
+    font-size: 12px;
+    line-height: 15px;
+  }
+  .cardCharacteristics p {
+    font-size: 12px;
+    line-height: 15px;
+  }
+  .cardCharacteristics {
+    height: 12px;
+    width: 100%;
+  }
+  .characteristics {
+    width: 60%;
+  }
+}
